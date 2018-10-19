@@ -5,7 +5,7 @@
 	$servername = "localhost";
 	$username = "root";
 	$password = "Gen123@";
-	$dbname = "gennextdb";
+	$dbname = "shopdb";
 
 	// Create Connection
 
