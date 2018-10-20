@@ -36,7 +36,7 @@
                         <img style=" background-size: 150% , 150% ;" src=<?php echo $_SESSION["gamer"]["pic_loc"]; ?>  width="150%" height="150%" alt="" >
                     </div>
                 </div>
-
+                
                 <div class="page-group quick-tab">
 		                <ul class="btn-tabs big center sub-tabs" id="">
 	                    <li data-tab="sub-tab-user-details" class="active"><a class="btn x-small light">User Details</a></li>
@@ -57,16 +57,9 @@
 			    	    </li>
                         -->
                         <li>
-                            <label class="main">Phone Number</label>
-                            <!--        button to add phone number 
-                            <span id="phone_profile"><a class="btn green " id ="edit_phone_number" onclick="Content.edit_phone_btn_onclick()">ADD MOBILE NUMBER</a></span>
-                            -->
-                            <input type="tel" id ="phone_number" value= <?php echo $_SESSION["gamer"]["phone_number"]; ?> >
-                        </li>
-			            <li>
 				            <label class="main">Name</label>
 			                <div class="grp">
-		    		            <input id="firstname" id ="old_firstname" class="text short full" type="text" value= <?php echo $_SESSION["gamer"]["name"]; ?> />
+		    		            <input id="name" class="text short full" type="text" value= <?php echo $_SESSION["gamer"]["name"]; ?> />
                                 <!--    <input type="hidden" id ="old_firstname" value="Sahaj">     -->
 				            </div>
 		                </li>
@@ -90,35 +83,25 @@
                         -->
 
                         <li>
-                            <label class="main">Email</label>
-                            <div class="grp">
-                                <input id="new_email" class="text short full" type="email" value= <?php echo $_SESSION["gamer"]["name"]; ?> />
-                                <!--
-                                <input type="hidden" id ="old_email" value="sahajbamba1999@gmail.com">
-                                <input type="hidden" id ="merge" value="0">
-                                <input type="hidden" id ="username_accnt" value="1982688228696863">
-                                <input type="hidden" id ="non_email" value="true">
-                                <input type="hidden" id ="email_login" value="false">
-                                <input type="hidden" id ="network" value="fb">
-                                <input type="hidden" id ="phonefbid" value="">
-                                <input type="hidden" id ="phonefbtoken" value="">
-                                -->
-                            </div>
-                        </li>
+				            <label class="main">Email</label>
+			                <div class="grp">
+		    		            <input id="email" class="text short full" type="text" value= <?php echo $_SESSION["gamer"]["email"]; ?> />
+				            </div>
+		                </li>
 
+						<li>
+                            <label class="main">Phone Number</label>
+                            <input type="tel" id ="phone" value= <?php echo $_SESSION["gamer"]["phone_number"]; ?> >
+                        </li>
+			            
                         <li>
                             <label class="main">Address</label>
                             <div class="grp">
-                                <input id="lastname" class="text short full" type="text" value= <?php echo $_SESSION["gamer"]["name"]; ?> />
+                                <input id="address" class="text short full" type="text" value= <?php echo $_SESSION["gamer"]["address"]; ?> />
                             </div>
                         </li>
-                        
-                        <!--
+<!--		Gender                        
                         <li>
-                            <label class="main">Birthday</label>
-                            <input id="datepicker" class="dob-dropdown" value = "dd/mm/yyyy" readonly onclick="Content.datepick(this)"/> </li>
-                        -->
-                         <li>
                             <label class="main">Gender</label>
                             
                             <select id="gender_u" class="gender-dropdown">
@@ -127,7 +110,7 @@
                                 <option value="u" >Other</option>
                             </select>
                         </li>
-
+			Password change
                         <li id="edit_password_link" class="hideoption">
 
                             <label class="main">Password</label>
@@ -135,11 +118,11 @@
                                 <a class="change-password" href="javascript:void(0)">Edit Password</a>
                             </div>
                         </li>
-                        
+-->
                         <li>
                             <label class="main"></label>
                              <div class="grp">
-                                <a class="btn green" href="javascript:void(0)" onclick="Content.checkIsMerge()">Save Changes</a>
+                                <a class="btn green" href="index.php" >Save Changes</a>
                             </div>
                         </li>
                     </ul>

@@ -24,7 +24,12 @@ if(($result->num_rows > 0)){
 //	Fetch a row from the result 		$result->fetch_assoc()
 //	Access different members of the result 			$row["id"]
 //				Start session and set session variables
-
- 	header('location:index.php');
+if ( strcmp($_SESSION["gamer"]["type"], "user") == 0 ) {
+	header('location:index.php');
+}
+elseif (strcmp($_SESSION["gamer"]["type"], "owner") == 0) {
+	header('location:Owner/home.php');
+}
+ 	
 
 ?>
