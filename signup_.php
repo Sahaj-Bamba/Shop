@@ -60,7 +60,7 @@ if (strlen($phone_number)<10||(!(phone_test($phone_number)))) {
 
 function phone_test($data){
   for ($i=0; $i < strlen($data); $i++) { 
-    if ($data[i]<'0'||$data[i]>'9') {
+    if ($data[$i]<'0'||$data[$i]>'9') {
       return false;
     } 
   }

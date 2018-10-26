@@ -33,7 +33,7 @@ body
 {
     position: relative;
 }
-.box .inputbox input
+.box .inputbox input 
 {
     width: 100%;
     padding: 10px 0;
@@ -69,6 +69,21 @@ body
 }
 
 .box input[type="submit"]
+{
+    background: transparent;
+    border: none;
+    outline: none;
+    colour: #fff;
+    background: #03a9f4;
+    padding: 10px 20px;
+    cursor: pointer;
+    border-radius: 5px;
+}
+.box a{
+    color: black;
+}
+
+.box a button
 {
     background: transparent;
     border: none;

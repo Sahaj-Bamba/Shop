@@ -57,8 +57,16 @@
 				<li class="active"><a href="#">Home</a></li>
 				<li ><a href="category.php">Categories</a></li>
 				<li ><a href="special.php">Special</a></li>
-				<li ><a href="request.php">Request</a></li>
+				<!--li ><a href="request.php">Request</a></li-->
 				<li ><a href="contact.php">Contact</a></li>
+				<?php 
+				if ((isset($_SESSION["gamer"]))&&(strcmp($_SESSION["gamer"]["type"], "owner")==0)) {  
+				?>
+
+					<li><a href="add_category.php">Add Category</a></li>
+					<li><a href="add_product.php">Add Product</a></li>
+
+				<?php } ?>
 			  </ul>
 			  <ul class="nav navbar-nav navbar-right" >
 				<?php if (!(isset($_SESSION["gamer"]))) {  ?>
@@ -71,6 +79,7 @@
 				  <li class="dropdown"><a class="dropdown-toggle" data-toggle="dropdown" href="#"> <?php echo $_SESSION["gamer"]["name"]; ?> <span class="caret"></span></a>
 					<ul class="dropdown-menu">
 					  <li><a href="profile.php">Profile</a></li>
+					  <li><a href="change_pic.php">Change Pic</a></li>
 					  <li><a href="logout.php">Logout</a></li>
 					</ul>
 					</li>
@@ -91,6 +100,19 @@
 			</div>
 		</div>
 
+		<div class="btn-group btn-group-justified" style="top: -15px;">
+		  	<div class="btn-group">
+		    	<button type="button" class="btn btn-primary">Shop by Category</button>
+		  	</div>
+		  	<div class="btn-group">
+		    	<a href="open_stater.php"><button id="shop_status" type="button" class="btn btn-success"> Open </button></a>
+			</div>
+			<div class="btn-group">
+				<button type="button" class="btn btn-info">Shop by Offers</button>
+			</div>
+		</div>
+
+
 		
 		<div id="myCarousel" class="carousel slide" data-ride="carousel">
 		    <!-- Indicators -->
@@ -102,7 +124,7 @@
 		    <!-- Wrapper for slides -->
 			<div class="carousel-inner" role="listbox">
 				<div class="item active">
-					<img src="Image/Site/1.jpeg" alt="Image">
+					<img src="Image/Site/1.jpg" alt="Image">
 					<div class="carousel-caption">
 						<h3>Our Products $</h3>
 						<!--	<p>Money Money.</p>	-->
@@ -110,7 +132,7 @@
 				</div>
 
 				<div class="item">
-					<img src="Image/Site/2.jpeg" alt="Image">
+					<img src="Image/Site/2.jpg" alt="Image">
 					<div class="carousel-caption">
 						<h3>More Products $</h3>
 						<!--p>Lorem ipsum...</p-->
@@ -131,6 +153,45 @@
 		  
 
 	</body>
+
+	<script type="text/javascript">
+		$(document).ready(function(){
+
+			<?php 
+
+				$result = $con->query("SELECT * FROM open WHERE 1");
+				$X = $result->fetch_assoc();
+				if ($X["is_open"] == 0) {
+
+ 			?>
+				$("#shop_status").removeClass("btn-success");
+				$("#shop_status").addClass("btn-danger");
+				$("#shop_status").text('Closed');
+			<?php } 
+			else { ?>
+			
+				$("#shop_status").removeClass("btn-danger");
+				$("#shop_status").addClass("btn-success");
+				$("#shop_status").text('Open');
+			
+			<?php } ?>
+
+			<?php 
+			if ((isset($_SESSION["gamer"]))&&(strcmp($_SESSION["gamer"]["type"], "owner")==0)) {  
+			?>
+				$("#shop_status").removeClass("disabled");
+				
+			<?php 
+			} 
+			else {
+			?>
+				$("#shop_status").addClass("disabled");
+			<?php } 
+			?>
+		});
+
+		
+	</script>
 
 
 </html>

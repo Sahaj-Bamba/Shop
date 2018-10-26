@@ -19,6 +19,10 @@ if(($result->num_rows > 0)){
 	$_SESSION["ID"] = $last_id;
 
 }
+else{
+
+	header('location:index.php');
+}
 
 // Tell number of rows in results 		$result->num_rows
 //	Fetch a row from the result 		$result->fetch_assoc()
@@ -28,7 +32,7 @@ if ( strcmp($_SESSION["gamer"]["type"], "user") == 0 ) {
 	header('location:index.php');
 }
 elseif (strcmp($_SESSION["gamer"]["type"], "owner") == 0) {
-	header('location:Owner/home.php');
+	header('location:index.php');
 }
  	
 
