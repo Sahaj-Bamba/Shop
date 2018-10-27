@@ -4,12 +4,12 @@ include 'connection.php';
 
 $name = mysqli_real_escape_string($con, $_POST["name"]);
 
-$rate = mysqli_real_escape_string($con, $_POST["rate"]);
+$duration = mysqli_real_escape_string($con, $_POST["duration"]);
 
-$category = mysqli_real_escape_string($con, $_POST["category"]);
+$details = mysqli_real_escape_string($con, $_POST["details"]);
 
 
-$X=$con->query("SELECT * FROM `product` ORDER BY id;");
+$X=$con->query("SELECT * FROM `offer` ORDER BY id;");
 
 $n=$X->num_rows;
 while (--$n) {
@@ -18,7 +18,7 @@ while (--$n) {
 $t=$X->fetch_assoc();
 $n=$t['id']+1;
 
-$uploaddir = 'Image/Product/';
+$uploaddir = 'Image/Offer/';
 $st= strrev($_FILES["pic_cat"]['name']);
 $ex = strrev(substr($st, 0,strpos($st, ".")));
 $uploadfile = $uploaddir . $n . "." . $ex;
@@ -42,7 +42,7 @@ else{
 */
 
 
-$con->query("INSERT INTO `product`(`name`, `rate`, `category`, `pic_loc`) VALUES ('$name','$rate','$category','$picname')");
+$con->query("INSERT INTO `offer`(`name`, `duration`, `details`, `pic_loc`) VALUES ('$name','$duration','$details','$picname')");
 
 header('location:index.php')
 

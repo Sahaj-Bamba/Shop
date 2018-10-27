@@ -65,6 +65,7 @@
 
 					<li><a href="add_category.php">Add Category</a></li>
 					<li><a href="add_product.php">Add Product</a></li>
+					<li><a href="add_offer.php">Add Offer</a></li>
 
 				<?php } ?>
 			  </ul>
