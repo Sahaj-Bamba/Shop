@@ -19,16 +19,24 @@
 	</head>
 	<body style="background: url('Image/background.jpg');">
 		<div class="box">
-			<h2>Add Category</h2>
+			<h2>Add Product</h2>
 			
-			<form enctype="multipart/form-data" method="POST" action="add_category_.php" autocomplete="off" >
+			<form enctype="multipart/form-data" method="POST" action="add_product_.php" autocomplete="off" >
 
 				<div class="inputbox">
 					<input type="text" name="name" required />
 					<label>Name</lable>
 				</div>
 				<div class="inputbox">
-					<input type="file" name="pic_cat" required>
+					<input type="text" name="rate" required />
+					<label>Rate</lable>
+				</div>
+				<div class="inputbox">
+					<input type="text" name="category" required />
+					<label>Category</lable>
+				</div>
+				<div class="inputbox">
+					<input type="file" name="pic_cat" required />
 					<label>Image</lable>
 				</div>
 				<center>
