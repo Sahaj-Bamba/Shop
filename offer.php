@@ -89,8 +89,8 @@
 
 $res = $con->query("SELECT * FROM `offer` WHERE 1 ORDER BY id ;");
 $htm = "";
-$rows = $res->num_rows+1;
-$rows /= 3;
+$row = $res->num_rows+1;
+$rows = floor($row/3);
 $res->fetch_assoc();
 
 while ($rows--) {
@@ -103,7 +103,7 @@ while ($rows--) {
 			$htm .= '<div class="col-sm-12 pic" style=" '.$b.'; background-repeat: no-repeat; background-position: center; background-size: 100% 100%;"></div> ';
 			$htm .= '<div class="col-sm-12 title"></div> ';
 			$htm .= '<div class="col-sm-12 title half"> '.$X['name'].' </div> ';
-			$htm .= '<div class="col-sm-12 txt"> '.$X['details'].'Duration :- '.$X['duration'].'</div> ';
+			$htm .= '<div class="col-sm-12 txt"> '.$X['details']."<br>".'Duration :- '.$X['duration'].'</div> ';
 			$htm .= '</div> ';
 	 	}
 	$htm .= '</div>';
@@ -113,10 +113,8 @@ while ($rows--) {
 
 
 
-
-
-
 ?>
+
 
 	<!--
 		<div class="row" >
@@ -160,10 +158,10 @@ while ($rows--) {
 				if (x>=768) {
 				
 					$(".offer_column").hover(function(){
-						console.log("ji");
-						$(this).children(".title").slideDown();
+						//console.log("ji");
+						$(this).children(".title").slideDown(500);
 					},function(){
-						$(this).children(".title").slideUp();
+						$(this).children(".title").slideUp(2000);
 					});		
 				}
 			});
