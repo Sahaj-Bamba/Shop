@@ -20,11 +20,10 @@ $temp=$_SESSION["gamer"]["id"];
 $result = $con->query("UPDATE `user` SET pic_loc='$name' WHERE id = '$temp' ;");
 
 
-    $sql = "SELECT * FROM user WHERE pic_loc='$name' ";
-    $result = $con->query($sql);
-    $_SESSION["gamer"] = $result->fetch_assoc();
+$sql = "SELECT * FROM user WHERE pic_loc='$name' ";
+$result = $con->query($sql);
+$_SESSION["gamer"] = $result->fetch_assoc();
 
-	header('location:index.php');
-
+header('location:index.php');
 
 ?>

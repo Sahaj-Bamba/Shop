@@ -28,7 +28,7 @@ else{
 	$con->query("UPDATE `category` SET `pic_loc`='$picname' WHERE `name`='$name' ");	
 }
 
-header('location:index.php')
+header('location:index.php');
 
 
 

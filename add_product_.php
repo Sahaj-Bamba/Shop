@@ -42,8 +42,8 @@ else{
 */
 
 
-$con->query("INSERT INTO `product`(`name`, `rate`, `category`, `pic_loc`) VALUES ('$name','$rate','$category','$picname')");
+$con->query("INSERT INTO `product`(`name`, `rate`, `category`, `pic_loc`) VALUES ('$name','$rate','$category','$picname') ;");
 
-header('location:index.php')
+header('location:index.php');
 
 ?>

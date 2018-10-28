@@ -8,7 +8,14 @@ include 'connection.php';
 				echo $X["is_open"] ;
 
 */
-print_r($_SESSION["gamer"]);
+//print_r($_SESSION["gamer"]);
+$hi = '<div class="row" > ';
+//echo $hi;
+$hi .= '<div class="col-sm-4 offer_column" style=""> ';
+	 		$b ="hkdg";
+
+$hi .= '<div class="col-sm-12 pic" style=" '.$b.'; background-repeat: no-repeat; background-position: center; background-size: 100% 100%;"></div> ';
+		echo $hi;		
 
 //echo $_SESSION["ID"];
 /*

@@ -44,6 +44,6 @@ else{
 
 $con->query("INSERT INTO `offer`(`name`, `duration`, `details`, `pic_loc`) VALUES ('$name','$duration','$details','$picname')");
 
-header('location:index.php')
+header('location:index.php');
 
 ?>

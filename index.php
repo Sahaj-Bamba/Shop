@@ -56,7 +56,7 @@
 			  <ul class="nav navbar-nav">
 				<li class="active"><a href="#">Home</a></li>
 				<li ><a href="category.php">Categories</a></li>
-				<li ><a href="special.php">Special</a></li>
+				<li ><a href="offer.php">Offers</a></li>
 				<!--li ><a href="request.php">Request</a></li-->
 				<li ><a href="contact.php">Contact</a></li>
 				<?php 
@@ -96,7 +96,7 @@
 
 		<div class="jumbotron">
 			<div class="container text-center">
-				<h1> Bamba Kirana Store </h1>      
+				<h1> BAMBA KIRANA STORE </h1>      
 				<strong><h2 class="mark"> You Want it ? We got it. </h2></strong>
 			</div>
 		</div>
