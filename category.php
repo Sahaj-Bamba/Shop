@@ -18,9 +18,11 @@
 		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
 		
 	  <link rel="icon" type="image/x-icon" href="favicon.ico">
-	  <link rel="stylesheet" type="text/css" href="style/index.css">
-
+	  <link rel="stylesheet" type="text/css" href="Style/index.css">
+	  <link rel="stylesheet" type="text/css" href="Style/category.css">
 	  <script type="text/javascript" src="javascript/index.js"></script>
+
+
 	</head>
 
 	<body>
@@ -79,14 +81,53 @@
 
 		<div class="jumbotron">
 			<div class="container text-center">
-				<h1> Bamba Kirana Store </h1>      
-				<strong><h2 class="mark"> You Want it ? We got it. </h2></strong>
+				<h1> Categories </h1>      
+				<strong><h2 class="mark"> We will not provide you what you want, but what you should have </h2></strong>
 			</div>
 		</div>
 
-
-
-		
+		<div class="cat row alert alert-success">
+			<div class=" bullet"> </div>
+			<div class=" name"> name1 </div>
+			<div class="all_pro" style="display: none;">
+				<div class=" col-sm-12 product">
+					<div class="pic">
+						pic 1
+					</div>
+					<div class="title">
+						title 1
+					</div>
+					<div class="description">
+						descr 1
+					</div>
+					<div class="rate">
+						price 1
+					</div>
+				</div>
+				<div class="product col-sm-12"> </div>
+				<div class="product col-sm-12"> </div>
+				<div class="product col-sm-12"> </div>
+			</div>
+		</div>
+		<div class="cat row alert alert-success">
+			<div class="bullet "> </div>
+			<div class="name "> name1 </div>
+		</div>
 
 	</body>
+
+	<script type="text/javascript">
+		$(document).ready(function () {
+			var x=0;
+			$(".cat").click(function(){
+				if (x%2) {
+					$(this).children(".all_pro").slideDown(1000);
+				}
+				else{
+					$(this).children(".all_pro").slideUp(1000);
+				}
+				x++;
+			});
+		});
+	</script>
 </html>
