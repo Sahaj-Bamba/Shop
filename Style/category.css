@@ -35,8 +35,8 @@
 .cat .product{
 	display: block;
 	
-	height: 30px;
-	border: solid 2px red;
+	height: 50px;
+	border: solid 0px red;
 	padding: 8px;
 }
 
@@ -44,3 +44,33 @@
 	display: none;
 	
 }
+
+.product > div {
+	display: inline-block;
+	border: solid 0px black;
+	position: relative;
+	top: -25px;
+}
+
+.product .pic {
+	width: 10%;
+	top:-24.5%;
+	height: 150%;
+	background-repeat: no-repeat;
+	background-position: center;
+	background-size: 100% 100%;
+}
+
+.product .title {
+	width: 20%;
+	height: auto;
+}
+
+.product .description {
+	width: 40%;
+}
+
+.product .rate {
+	width: 20%;
+}
+

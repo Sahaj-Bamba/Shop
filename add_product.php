@@ -31,6 +31,10 @@
 					<label>Rate</lable>
 				</div>
 				<div class="inputbox">
+					<input type="text" name="description" required />
+					<label>Description</lable>
+				</div>
+				<div class="inputbox">
 					<input type="text" name="category" required />
 					<label>Category</lable>
 				</div>

@@ -18,6 +18,10 @@
 		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
 		
 	  <link rel="icon" type="image/x-icon" href="favicon.ico">
+
+		<link rel="stylesheet" type="text/css" href="Style/home.css">
+		<link rel="stylesheet" type="text/css" href="Style/home2.css">
+
 	  <link rel="stylesheet" type="text/css" href="Style/index.css">
 	  <link rel="stylesheet" type="text/css" href="Style/category.css">
 	  <script type="text/javascript" src="javascript/index.js"></script>
@@ -86,12 +90,57 @@
 			</div>
 		</div>
 
+
+
+<?php
+
+	$cats = $con->query("SELECT * FROM category WHERE 1 ;");
+	while ($row = $cats->fetch_assoc()) {
+		$htm = "";
+		$htm .= '<div class="cat row alert alert-success">';
+		$htm .= '<div class=" bullet" style="background: url('."'".$row['pic_loc']."'".');  background-repeat: no-repeat; background-size: 100% 100%; background-position: center; "> </div>';
+		$htm .= '<div class=" name"> '.$row['name'].' </div>';
+		
+		echo $htm;
+		$pros = $con->query("SELECT `id`, `name`, `rate`, `category`, `pic_loc`, `description` FROM `product` WHERE `category` ='".$row['name']."'");
+		if ($pros->num_rows == 0) {
+			echo "</div>";
+			continue;
+		}
+		echo '<div class="all_pro" style="display: none;">';
+		while ($col = $pros->fetch_assoc()) {
+			$htm = "";
+			$htm .= '<div class=" col-sm-12 product">';
+			$htm .= '<div class="pic" style="background: url('."'".$col['pic_loc']."'".');  background-repeat: no-repeat; background-size: 100% 100%; background-position: center; ">';
+			$htm .= '</div>';
+			$htm .= '<div class="title">';
+			$htm .= $col['name'];
+			$htm .= '</div>	';
+			$htm .= '<div class="description">';
+			$htm .= $col['description'];
+			$htm .= '</div>';
+			$htm .= '<div class="rate">';
+			$htm .= $col['rate'];
+			$htm .= '</div>';
+			$htm .=	'</div>';
+			echo $htm;
+		}
+		$htm = "";
+		$htm .= "</div>";
+		$htm .= "</div>";
+		echo $htm;
+	}
+
+?>
+
+
+<!--
 		<div class="cat row alert alert-success">
-			<div class=" bullet"> </div>
+			<div class=" bullet" style="background: url();"> </div>
 			<div class=" name"> name1 </div>
 			<div class="all_pro" style="display: none;">
 				<div class=" col-sm-12 product">
-					<div class="pic">
+					<div class="pic" style="background: url(); background-repeat: no-repeat; background-size: 100% 100%; background-position: center;">
 						pic 1
 					</div>
 					<div class="title">
@@ -113,15 +162,17 @@
 			<div class="bullet "> </div>
 			<div class="name "> name1 </div>
 		</div>
+-->
 
+		
 	</body>
 
 	<script type="text/javascript">
 		$(document).ready(function () {
-			var x=0;
+			var x=1;
 			$(".cat").click(function(){
 				if (x%2) {
-					$(this).children(".all_pro").slideDown(1000);
+					$(this).children(".all_pro").slideDown(100);
 				}
 				else{
 					$(this).children(".all_pro").slideUp(1000);

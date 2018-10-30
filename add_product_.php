@@ -8,6 +8,8 @@ $rate = mysqli_real_escape_string($con, $_POST["rate"]);
 
 $category = mysqli_real_escape_string($con, $_POST["category"]);
 
+$description = mysqli_real_escape_string($con, $_POST["description"]);
+
 
 $X=$con->query("SELECT * FROM `product` ORDER BY id;");
 
@@ -42,7 +44,7 @@ else{
 */
 
 
-$con->query("INSERT INTO `product`(`name`, `rate`, `category`, `pic_loc`) VALUES ('$name','$rate','$category','$picname') ;");
+$con->query("INSERT INTO `product`(`name`, `rate`, `category`, `pic_loc` , `description`) VALUES ('$name','$rate','$category','$picname' , '$description') ;");
 
 header('location:index.php');
 

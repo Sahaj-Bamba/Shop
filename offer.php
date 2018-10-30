@@ -18,7 +18,12 @@
 		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
 		
 		<link rel="icon" type="image/x-icon" href="favicon.ico">
+		
+		<link rel="stylesheet" type="text/css" href="Style/home.css">
+		<link rel="stylesheet" type="text/css" href="Style/home2.css">
+
 		<link rel="stylesheet" type="text/css" href="Style/index.css">
+
 
 		<link rel="stylesheet" type="text/css" href="Style/offer.css">
 	  <script type="text/javascript" src="javascript/index.js"></script>
@@ -138,6 +143,8 @@ while ($rows--) {
 			</div>
 		</div>
 	-->
+
+
 
 		<script type="text/javascript">
 

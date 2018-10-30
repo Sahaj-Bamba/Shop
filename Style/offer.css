@@ -1,79 +1,62 @@
 
 
-.cat > .all_pro{
-	display: none;
-	
+.offer_column{
+	display: block;
+	border: solid 0px blue;
+	height: 300px;
 }
 
-.cat{
-	text-align: center;
-	padding: 5px;
-}
-
-.cat .bullet{
+.offer_column > .pic{
 	background-size: 100% 100%;
-	display: inline-block;
+	display: block;
 	border: solid 0px red;
 	position: relative;
-	left: 10px;
-	height: 30px; 
-	width: 30px;
+	height: 200px; 
 	background-repeat: no-repeat; 
 	background-position: center;
-	background-color: blue;
 }
-.cat .name{
-	display: inline-block;
-	position: relative;
-	bottom: 7px;
-	height: 20px;
-	font-size: 1.5em;
-	font-weight: bolder;
-	left: 40px;
-}
-
-.cat .product{
-	display: block;
-	
-	height: 50px;
-	border: solid 2px red;
-	padding: 8px;
-}
-
-.cat > .all_pro{
+.offer_column > .title{
 	display: none;
-	
-}
-
-.product{
-	height:500px;
-}
-
-.product > div {
-	display: inline-block;
-	border: solid 2px black;
-	position: relative;
-}
-
-.product .pic {
-	width: 10%;
-	top:-24.5%;
-	height: 150%;
-	background-repeat: no-repeat;
+	border: solid 0px red;
+	position: absolute;
+	height: 100px; 
+	text-align: center;
+	text-shadow: rgb(12,45,126);
+	font-weight: bolder;
+	font-size: 2em;
+	background-repeat: no-repeat; 
 	background-position: center;
-	background-size: 100% 100%;
+}
+.offer_column > .half{
+	top: 80px;
+	text-align: center;	
 }
 
-.product .title {
-	width: 20%;
-	height: auto;
+.offer_column > .txt{
+	display: block;
+	border: solid 0px black;
+	height: 100px;
+	text-align: center;
+	overflow: auto;
 }
 
-.product .description {
-	width: 40%;
-}
 
-.product .rate {
-	width: 20%;
-}
+@media screen and (max-width: 768px){
 
+	.offer_column > .half{
+		top: 220px;
+		display: block;
+	}
+
+	.offer_column > .txt{
+		height: 100px;
+		top: 40px;
+		text-align: center;
+	}
+
+	.offer_column{
+		display: block;
+		border: solid 0px blue;
+		height: 340px;
+	}
+}
