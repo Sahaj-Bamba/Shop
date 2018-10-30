@@ -16,9 +16,7 @@
 		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.0/jquery.min.js"></script>
 		<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
 		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-		<link rel="stylesheet" type="text/css" href="Style/home.css">
-		<link rel="stylesheet" type="text/css" href="Style/home2.css">
-
+		
 	  <link rel="icon" type="image/x-icon" href="favicon.ico">
 	  <link rel="stylesheet" type="text/css" href="style/index.css">
 
@@ -153,39 +151,7 @@
 			<span class="sr-only">Next</span>
 		    </a>
 		</div>
-	
-	<div class="footer" >
-		<div class="txt">
-			Copyright © 2018<br> Design by Sahaj Bamba
-		</div>
-			<div class="social" style="display: block;">
-				<div class="tagc" >
-				<div class="image" style=" border: solid 0px red; background-image: url('logos/fb.jpg');" >
-				</div>
-				<div class="image2" style=" border: solid 0px red; background-image: url('logos/fb2.jpg');">
-				</div>
-				</div>
-				<div class="tagc" >
-				<div class="image" style="background-image: url('logos/twitter.jpg'); " >
-				</div>
-				<div class="image2" style=" border: solid 0px red; background-image: url('logos/twitter2.jpg'); ">
-				</div>
-				</div>
-				<div class="tagc" >
-				<div class="image" style=" border: solid 0px red; background-image: url('logos/instagram.png'); " >
-				</div>
-				<div class="image2" style=" border: solid 0px red; background-image: url('logos/instagram2.png'); ">
-				</div>
-				</div>
-				<div class="tagc" >
-				<div class="image" style=" border: solid 0px red; background-image: url('logos/youtube.png'); " >
-				</div>
-				<div class="image2" style=" border: solid 0px red; background-image: url('logos/youtube2.png'); ">
-				</div>
-				</div>
-			</div>
-	</div>
-  
+		  
 
 	</body>
 

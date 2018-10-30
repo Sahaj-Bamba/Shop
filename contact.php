@@ -88,7 +88,7 @@
 				<li ><a href="category.php">Categories</a></li>
 				<li ><a href="offer.php">Offers</a></li>
 				<!--li ><a href="request.php">Request</a></li-->
-				<li ><a href="contact.php active">Contact</a></li>
+				<li class="active"><a href="contact.php">Contact</a></li>
 				<?php 
 				if ((isset($_SESSION["gamer"]))&&(strcmp($_SESSION["gamer"]["type"], "owner")==0)) {  
 				?>
@@ -204,14 +204,14 @@
 	</div>
 	<span class="spil"><br></span>
 	<form method="post" action="contact_.php">
-		<input type="text" name="name" placeholder="Your Name" style="width: 48%; display: inline-block; height: 15%;" />
-		<input name="email" type="text" placeholder="Your Email" value = <?php if ((isset($_SESSION['gamer']))) echo $_SESSION['gamer']['email']; ?> style="width: 48%; display: inline-block; height: 15%;" />
+		<input type="text" name="name" placeholder="Your Name" style="width: 48%; display: inline-block; height: 15%;" required />
+		<input name="email" type="text" placeholder="Your Email" value = <?php if ((isset($_SESSION['gamer']))) echo $_SESSION['gamer']['email']; ?> style="width: 48%; display: inline-block; height: 15%;" required/>
 		<br>
 		<br>
 		<input name="subject" type="text" placeholder="Subject" style="width: 96%; display: inline-block; height: 15%;"/>
 		<br>
 		<br>
-		<textarea placeholder="Message: *"  name="comment" rows="5" cols="40" > comment
+		<textarea placeholder="Message: *"  name="comment" rows="5" cols="40" required> comment
 		</textarea>
 		<br>
 		<br>
