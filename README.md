@@ -34,3 +34,13 @@ Details
 #  Website Link
 
 https://ltss.000webhostapp.com/shop/index.php
+
+
+
+# Features to be added in Version 2
+
+A checkout system
+
+Payment Acceptance Method
+
+Bill creation System
