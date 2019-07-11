@@ -1,7 +1,6 @@
 # Shop
 A website for Bamba Kirana Store
 
-
 # Owner features
 Add others as owners
 
@@ -12,6 +11,11 @@ Add new product category to shop
 Add offers to Store
 
 Open or close the store
+
+# Owner Credentials for testing
+
+name:- Sahaj
+passwd:- qwerty
 
 # Customer features
 View products by categories\n
