@@ -12,10 +12,6 @@ Add offers to Store
 
 Open or close the store
 
-# Owner Credentials for testing
-
-name:- Sahaj
-passwd:- qwerty
 
 # Customer features
 View products by categories\n
@@ -35,10 +31,7 @@ Price
 
 Details
 
-#  Website Link
-
-https://ltss.000webhostapp.com/shop/index.php
-
+#  [Click to check out](https://shop.sahajbamba.me/)
 
 
 # Features to be added in Version 2
