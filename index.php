@@ -1,27 +1,56 @@
 <?php 
 
-  include 'connection.php';
-  include 'Vars.php';
+	include 'connection.php';
+	include 'Vars.php';
+
+    if(isset($_GET['shop'])){
+        $ownerShopName = mysqli_real_escape_string($con, $_GET["shop"]);
+        $_SESSION["ownerShopName"] = $ownerShopName;    
+    }else if(isset($_SESSION['shop'])){
+	
+	}else{
+		header('location:home.php');
+	}
+
 
 ?>
 
 <!DOCTYPE html>
 <html>
 	
-	<head>
-		<title> Bamba Kirana Store </title>
-		
-	  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
-		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.0/jquery.min.js"></script>
-		<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
-		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-		
-	  <link rel="icon" type="image/x-icon" href="favicon.ico">
-	  <link rel="stylesheet" type="text/css" href="style/index.css">
+    <head>
 
-	  <script type="text/javascript" src="javascript/index.js"></script>
-	</head>
+        <title>
+            <?php echo $_SESSION["ownerShopName"]; ?>
+        </title>    
+        
+        <meta charset="UTF-8" />
+        <meta https-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1" />
+        <meta name="description" content="Shop" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+                
+        <!-- Global site tag (gtag.js) - Google Analytics -->
+        <script async src="https://www.googletagmanager.com/gtag/js?id=UA-161923538-2"></script>
+        <script>
+        window.dataLayer = window.dataLayer || [];
+        
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+        gtag('config', 'UA-161923538-2');
+        </script>
+        <!-- ending google analytics-->
+        
+        
+        <!-- Latest compiled and minified CSS for boot strap-->
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
+        
+        
+        <link rel="icon" type="image/x-icon" href="Image/Site/icon.jpeg">
+        <link rel="stylesheet" type="text/css" href="style/index.css">
+        
+        
+    </head>
 	
 	<style type="text/css">
 	.carousel-inner img {
@@ -39,7 +68,43 @@
 
 	</style>
 
+
 	<body>
+
+        <section id="header">
+            <nav class="navbar navbar-expand-md bg-dark navbar-dark navbar-fixed-top">
+                <!-- Brand -->
+                <a class="navbar-brand" href="#"><?php echo $_SESSION["ownerShopName"]; ?></a>
+                <!-- Toggler/collapsibe Button -->
+                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#collapsibleNavbar">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                
+                <!-- Navbar links -->
+                <div class="collapse navbar-collapse" id="collapsibleNavbar">
+                    <ul class="navbar-nav mr-auto">
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">Home</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">Category</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">Offers</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">Contact</a>
+                        </li>
+                    </ul>
+                    <ul class="navbar-nav">
+                        <li>
+                            
+                        </li>
+                    </ul>
+                </div>
+			</nav>
+			
+		</section>   
 
 		<nav class="navbar navbar-inverse navbar-fixed-top">
 		  <div class="container-fluid">
@@ -153,46 +218,71 @@
 		</div>
 		  
 
-	</body>
 
-	<script type="text/javascript">
-		$(document).ready(function(){
 
-			<?php 
+        <section id="Footer">
+			<nav class="navbar navbar-inverse navbar-fixed-bottom fixed-bottom navbar bg-light bg-dark">
+				<div class="container-fluid">
+					<div class="navbar-header">
+						<div class="navbar-brand content text-muted">
+							Copyright © 2020 Design by Sahaj Bamba								
+						</div>
+					</div>
+				</div>
+			</nav>
+		</section>
 
-				$result = $con->query("SELECT * FROM open WHERE 1");
-				$X = $result->fetch_assoc();
-				if ($X["is_open"] == 0) {
+		<!-- jQuery library -->
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
 
- 			?>
-				$("#shop_status").removeClass("btn-success");
-				$("#shop_status").addClass("btn-danger");
-				$("#shop_status").text('Closed');
-			<?php } 
-			else { ?>
-			
-				$("#shop_status").removeClass("btn-danger");
-				$("#shop_status").addClass("btn-success");
-				$("#shop_status").text('Open');
-			
-			<?php } ?>
+		<!-- Popper JS -->
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
 
-			<?php 
-			if ((isset($_SESSION["gamer"]))&&(strcmp($_SESSION["gamer"]["type"], "owner")==0)) {  
-			?>
-				$("#shop_status").removeClass("disabled");
+		<!-- Latest compiled JavaScript -->
+		<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>
 				
-			<?php 
-			} 
-			else {
-			?>
-				$("#shop_status").addClass("disabled");
-			<?php } 
-			?>
-		});
+		<!-- My Scripts -->
+		<script src="index.js"></script>
 
-		
-	</script>
+        <script type="text/javascript">
+            $(document).ready(function(){
 
+                <?php 
+
+                    $result = $con->query("SELECT * FROM open WHERE 1");
+                    $X = $result->fetch_assoc();
+                    if ($X["is_open"] == 0) {
+                ?>
+                    $("#shop_status").removeClass("btn-success");
+                    $("#shop_status").addClass("btn-danger");
+                    $("#shop_status").text('Closed');
+                <?php } 
+                else { ?>
+                
+                    $("#shop_status").removeClass("btn-danger");
+                    $("#shop_status").addClass("btn-success");
+                    $("#shop_status").text('Open');
+                
+                <?php } ?>
+
+                <?php 
+                if ((isset($_SESSION["gamer"]))&&(strcmp($_SESSION["gamer"]["type"], "owner")==0)) {  
+                ?>
+                    $("#shop_status").removeClass("disabled");
+                    
+                <?php 
+                } 
+                else {
+                ?>
+                    $("#shop_status").addClass("disabled");
+                <?php } 
+                ?>
+            });
+
+            
+        </script>
+
+
+    </body>
 
 </html>

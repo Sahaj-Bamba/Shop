@@ -1,16 +1,32 @@
-.image{
-	display: inline-block;
-	border: solid 0px red;
-	position: relative;
-	background-color: white;
-	background-repeat: no-repeat;
-	background-size: 100% 100%;
+.navbar{
+	z-index: 10;
 }
-.image2{
-	display: inline-block;
-	border: solid 0px red;
-	position: relative;
-	background-color: white;
+
+@keyframes initial {
+    0%   {height: 200px; width: 200px;}
+    25%  {height: 600px; width: 600px; left: 300px; top: 50px;}
+    50%  {height: 300px; width: 300px; left: 500px; top: 150px;}
+    99% {height: 800px; width: 2000px; left: 500px; top: 150px;}
+    100% {display: none;}
+}
+
+#initial_animation{
+	display: block;
+	position: absolute;
+	top: 200px;
+	left: 600px;
+	width: 200px;
+	height: 200px;
+	z-index: 1;
 	background-repeat: no-repeat;
 	background-size: 100% 100%;
+	background-image: url("Images/1.jpg");
+	-webkit-animation-name: example;  /* Safari 4.0 - 8.0 */
+    -webkit-animation-duration: 3s;  /* Safari 4.0 - 8.0 */    
+    -webkit-animation-fill-mode: forwards; /* Safari 4.0 - 8.0 */
+    -webkit-animation-timing-function: ease-in-out;
+    animation-name: initial;
+    animation-duration: 4s;    
+    animation-fill-mode: forwards;
+    animation-timing-function: ease-in-out;
 }

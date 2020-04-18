@@ -3,9 +3,9 @@
 	// set connection variables
 
 	$servername = "localhost";
-	$username = "id7678154_bamba";
-	$password = "Bamba123";
-	$dbname = "shopdb";
+	$username = "root";
+	$password = "";
+	$dbname = "shop";
 
 	// Create Connection
 
