@@ -65,7 +65,7 @@
 		
 		<section id="Main-Content">
 
-			<form method="GET" action="home.php">
+			<form method="GET" action="index.php">
 				<input type="text" name="shop">
 			</form>
 		
