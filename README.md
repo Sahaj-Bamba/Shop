@@ -1,5 +1,5 @@
 # Shop
-A website for Bamba Kirana Store
+A website for Shopping, You can register yourself and open your own store or you can view other stores.
 
 # Owner features
 Add others as owners
@@ -16,6 +16,7 @@ Open or close the store
 
 name:- Sahaj
 passwd:- qwerty
+shop:- Bamba Kirana Store
 
 # Customer features
 View products by categories\n
@@ -37,7 +38,7 @@ Details
 
 #  Website Link
 
-https://ltss.000webhostapp.com/shop/index.php
+https://shop.sahajbamba.me
 
 
 
