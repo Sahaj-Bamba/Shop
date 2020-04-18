@@ -30,7 +30,7 @@
         
 
         <link rel="icon" type="image/x-icon" href="Image/Site/icon.jpeg">
-        <link rel="stylesheet" type="text/css" href="style/index.css">
+        <link rel="stylesheet" type="text/css" href="Style/home.css">
         
         
     </head>

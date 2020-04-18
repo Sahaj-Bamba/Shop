@@ -47,7 +47,7 @@
         
         
         <link rel="icon" type="image/x-icon" href="Image/Site/icon.jpeg">
-        <link rel="stylesheet" type="text/css" href="style/index.css">
+        <link rel="stylesheet" type="text/css" href="Style/index.css">
         
         
     </head>
@@ -87,13 +87,13 @@
                             <a class="nav-link" href="#">Home</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="#">Category</a>
+                            <a class="nav-link" href="category.php">Category</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="#">Offers</a>
+                            <a class="nav-link" href="offer.php">Offers</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="#">Contact</a>
+                            <a class="nav-link" href="contact.php">Contact</a>
                         </li>
 						<?php 
 							if ((isset($_SESSION["gamer"]))&&(strcmp($_SESSION["gamer"]["type"], "owner")==0)) {  
@@ -209,7 +209,7 @@
 			<span class="sr-only">Next</span>
 		    </a>
 		</div> -->
-		  
+	
 
 
 
@@ -235,7 +235,7 @@
 		<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>
 				
 		<!-- My Scripts -->
-		<script src="index.js"></script>
+		<script src="Javascript/index.js"></script>
 
         <script type="text/javascript">
             $(document).ready(function(){
