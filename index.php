@@ -6,7 +6,7 @@
     if(isset($_GET['shop'])){
         $ownerShopName = mysqli_real_escape_string($con, $_GET["shop"]);
         $_SESSION["ownerShopName"] = $ownerShopName;    
-    }else if(isset($_SESSION['shop'])){
+    }else if(isset($_SESSION['ownerShopName'])){
 	
 	}else{
 		header('location:home.php');
