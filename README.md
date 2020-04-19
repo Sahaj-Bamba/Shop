@@ -38,8 +38,7 @@ Details
 
 #  Website Link
 
-https://shop.sahajbamba.me
-
+#  [Click to check out](https://shop.sahajbamba.me/)
 
 
 # Features to be added in Version 2
