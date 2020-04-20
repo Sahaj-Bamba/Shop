@@ -44,7 +44,7 @@
         
         
         <link rel="icon" type="image/x-icon" href="Image/Site/icon.jpeg">
-        <link rel="stylesheet" type="text/css" href="Style/login.css">
+        <link rel="stylesheet" type="text/css" href="Style/category.css">
         
         
     </head>
@@ -52,9 +52,6 @@
 	<style type="text/css">
 	</style>
 
-    <style>
-        .error {color: #FF0000;}
-    </style>
 
 	<body>
 
@@ -136,52 +133,13 @@
 
 		<section id="main-content">
 
-	
+			<div class="jumbotron">
+				<div class="container text-center">
+					<h1 class="display-2"> Offers </h1>      
+					<strong><h4 class="mark">  Pay Less , Buy More. </h4></strong>
+				</div>
+			</div>
 
-            <div class="box">
-            <h2>Signup</h2>
-            
-            <form action="signup_.php" autocomplete="off" method="POST">
-
-                <div class="inputbox">
-                    <input type="text" name="name" required>
-                    <label>Username</lable>
-                </div>
-                <div class="inputbox">
-                    <input type="text" name="phone" required>
-                    <label>Phone Number</lable>
-                </div>
-                <div class="inputbox">
-                    <input type="email" name="email" required>
-                    <label>Email</lable>
-                    
-                </div>
-                <div class="inputbox">
-                    <input type="text" name="address" required>
-                    <label>Address</lable>
-                </div>
-                <div class="inputbox">
-                    <input type="password" name="password" required>
-                    <label>Password</lable>
-                    <span class="error" style="font-size: 0.4em;"> 
-                </div>
-                <input type="submit" name="submit" value="Submit">
-                <br>
-                <div class="inputbox">
-                    <label><?php $_SESSION['Er']; ?></lable>
-                    <span class="error" > <?php echo $_SESSION["repeatErr"];?></span>     
-                        <br>
-                    <span class="error" > <?php echo $_SESSION["nameErr"];?></span>     
-                        <br>
-                    <span class="error" > <?php echo $_SESSION["phoneErr"];?></span>     
-                        <br>
-                    <span class="error" > <?php echo $_SESSION["emailErr"];?></span>    
-                        <br>
-                    <span class="error" > <?php echo $_SESSION["passErr"];?></span>     
-                </div>
-            </form>
-        </div> 
-    
 
 		</section>
 
@@ -219,5 +177,3 @@
 
     </body>
 </html>
-
-            
