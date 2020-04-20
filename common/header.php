@@ -1,7 +1,15 @@
 <section id="header fixed-top" style="position: fixed; width: 100%;">
     <nav class="navbar navbar-expand-md bg-dark navbar-dark">
         <!-- Brand -->
-        <a class="navbar-brand" href="#"><?php echo $_SESSION["ownerShopName"]; ?></a>
+        <a class="navbar-brand" href="#">
+            <?php 
+                if ( isset($_SESSION['shopName']) )  {
+                    echo $_SESSION['shopName'];
+                }else{
+                    echo $_SESSION["SiteName"];
+                }  
+            ?>
+        </a>
         <!-- Toggler/collapsibe Button -->
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#collapsibleNavbar">
             <span class="navbar-toggler-icon"></span>
@@ -9,6 +17,9 @@
         
         <!-- Navbar links -->
         <div class="collapse navbar-collapse" id="collapsibleNavbar">
+            <?php 
+                if ( isset($_SESSION['shopName']) )  {
+            ?>
             <ul class="navbar-nav mr-auto">
                 <li class="nav-item">
                     <a class="nav-link" href="#">Home</a>
@@ -38,7 +49,9 @@
                 <?php } ?>
             
             </ul>
-            
+            <?php>
+                }  
+            <?>
             <ul class="navbar-nav">
                 <?php if (!(isset($_SESSION["gamer"]))) {  ?>
             

@@ -1,5 +1,11 @@
 <title>
-    <?php echo $_SESSION["ownerShopName"]; ?>
+    <?php 
+        if ( isset($_SESSION['shopName']) )  {
+            echo $_SESSION['shopName'];
+        }else{
+            echo $_SESSION["SiteName"];
+        }  
+    ?>
 </title>    
 
 <meta charset="UTF-8" />

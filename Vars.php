@@ -6,5 +6,6 @@
 	$_SESSION["phoneErr"] = "";
 	$_SESSION["nameErr"] = "";
 	$_SESSION["Er"] = "";
+	$_SESSION["SiteName"] = "Your Store"
 
 ?>
