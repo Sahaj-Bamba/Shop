@@ -17,10 +17,10 @@
         
         <!-- Navbar links -->
         <div class="collapse navbar-collapse" id="collapsibleNavbar">
-            <ul class="navbar-nav mr-auto">
             <?php 
                 if ( isset($_SESSION['shopName']) )  {
             ?>
+            <ul class="navbar-nav mr-auto">
                 <li class="nav-item">
                     <a class="nav-link" href="#">Home</a>
                 </li>
@@ -48,10 +48,10 @@
             
                 <?php } ?>
             
-            <?php
-                }  
-            ?>
             </ul>
+            <?php>
+                }  
+            <?>
             <ul class="navbar-nav">
                 <?php if (!(isset($_SESSION["gamer"]))) {  ?>
             

@@ -1,14 +1,7 @@
 <?php 
 
 	include 'connection.php';
-	include 'Vars.php';
-
-	if(isset($_SESSION['ownerShopName'])){
-	
-	}else{
-		header('location:home.php');
-	}
-
+	// include 'Vars.php';
 
 ?>
 
@@ -98,7 +91,7 @@
         ?>
 
 		<!-- My Scripts -->
-		<script src="Javascript/category.js"></script>
+		<script src="Javascript/signup.js"></script>
 
 		<script type="text/javascript">
 

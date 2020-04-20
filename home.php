@@ -1,7 +1,7 @@
 <?php 
 
-	require 'connection.php';
-	require 'Vars.php';
+	include 'connection.php';
+	include 'Vars.php';
 
 ?>
 <!DOCTYPE html>
@@ -10,7 +10,7 @@
     <head>
         
         <?php
-            require 'common/head.php';
+            include 'common/head.php';
         ?>
         
         <link rel="stylesheet" type="text/css" href="Style/home.css">
@@ -21,7 +21,7 @@
     <body>
 
         <?php
-            require 'common/header.php';
+            include 'common/header.php';
         ?>
         
 		<section id="Main">
@@ -47,7 +47,7 @@
 
 
         <?php
-            require 'common/footer.php';
+            include 'common/footer.php';
         ?>
 
 		<!-- My Scripts -->
