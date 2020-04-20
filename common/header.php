@@ -34,7 +34,7 @@
                     <a class="nav-link" href="contact.php">Contact</a>
                 </li>
                 <?php 
-                    if ((isset($_SESSION["gamer"]))&&(strcmp($_SESSION["gamer"]["type"], "owner")==0)) {  
+                    if ((isset($_SESSION["gamer"]))) {  
                 ?>
                     <li class="nav-item">
                         <a class="nav-link" href="#">Add Category</a>
