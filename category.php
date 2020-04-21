@@ -45,8 +45,8 @@
 				$cats = $con->query("SELECT * FROM category WHERE owner = '$x' ;");
 				while ($row = $cats->fetch_assoc()) {
 					$htm = "";
-					$htm .= '<div class="cat row alert alert-success" style="text-align: center; align-items: center;">';
-					$htm .= '<div style="margin:auto;">';
+					$htm .= '<div class="cat row alert alert-success" style="text-align: center; align-items: center; display: block">';
+					$htm .= '<div style="margin:auto;" class= >';
 					$htm .= '<div class=" bullet" style="background: url('."'".$row['pic_loc']."'".');  background-repeat: no-repeat; background-size: 100% 100%; background-position: center; "> </div>';
 					$htm .= '<div class=" name"> '.$row['name'].' </div>';
 					$htm .= '</div>';
@@ -59,19 +59,19 @@
 						echo "</div>";
 						continue;
 					}
-					echo '<div class="all_pro" style="display: none;">';
+					echo '<div class="all_pro row" style="display: none;">';
 					while ($col = $pros->fetch_assoc()) {
 						$htm = "";
-						$htm .= '<div class=" col-sm-12 product">';
-						$htm .= '<div class="pic" style="background: url('."'".$col['pic_loc']."'".');  background-repeat: no-repeat; background-size: 100% 100%; background-position: center; ">';
+						$htm .= '<div class="row product">';
+						$htm .= '<div class="pic col-1" style="background: url('."'".$col['pic_loc']."'".');  background-repeat: no-repeat; background-size: 100% 100%; background-position: center; ">';
 						$htm .= '</div>';
-						$htm .= '<div class="title">';
+						$htm .= '<div class="title col-3">';
 						$htm .= $col['name'];
 						$htm .= '</div>	';
-						$htm .= '<div class="description">';
+						$htm .= '<div class="description col-3">';
 						$htm .= $col['description'];
 						$htm .= '</div>';
-						$htm .= '<div class="rate">';
+						$htm .= '<div class="rate col-3">';
 						$htm .= $col['rate'];
 						$htm .= '</div>';
 						$htm .=	'</div>';

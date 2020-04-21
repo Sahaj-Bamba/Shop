@@ -4,7 +4,7 @@ include 'connection.php';
 
 $name = mysqli_real_escape_string($con, $_POST["name"]);
 
-$uploaddir = 'Image/'.$_SESSION['id'].'/'.'Category/';
+$uploaddir = 'Image/'.$_SESSION['gamer']['id'].'/'.'Category/';
 $uploadfile = $uploaddir . basename($_FILES['pic_cat']['name']);
 
 $st= strrev($_FILES["pic_cat"]['name']);

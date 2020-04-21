@@ -59,10 +59,10 @@
 							$htm .= '<div class="col-sm-4 offer_column" style=""> ';
 							$a=$X['pic_loc'] ;
 							$b = "background: url('$a')";
-							$htm .= '<div class="col-sm-12 pic" style=" '.$b.'; background-repeat: no-repeat; background-position: center; background-size: 100% 100%;"></div> ';
-							$htm .= '<div class="col-sm-12 title"></div> ';
-							$htm .= '<div class="col-sm-12 title half"> '.$X['name'].' </div> ';
-							$htm .= '<div class="col-sm-12 txt"> '.$X['details']."<br>".'Duration :- '.$X['duration'].'</div> ';
+							$htm .= '<div class="row pic" style=" '.$b.'; background-repeat: no-repeat; background-position: center; background-size: 100% 100%;height : 200px; max-width : 300px; margin: auto;"></div> ';
+							$htm .= '<div class="row title" style=" max-width : 300px; margin: auto;"></div> ';
+							$htm .= '<div class="row title half" style=" max-width : 300px; margin: auto;"> '.$X['name'].' </div> ';
+							$htm .= '<div class="row txt" style=" max-width : 300px; margin: auto;"> '.$X['details']."<br>".'Duration :- '.$X['duration'].'</div> ';
 							$htm .= '</div> ';
 						}
 					$htm .= '</div>';
