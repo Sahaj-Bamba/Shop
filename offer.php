@@ -40,7 +40,7 @@
 
 			<?php
 
-				$res = $con->query("SELECT * FROM `offer` WHERE 1 ORDER BY id ;");
+				$res = $con->query("SELECT * FROM `offer` WHERE owner = ".$_SESSION['id']." ORDER BY id ;");
 				$htm = "";
 				if($res==null){
 					$rows = 0;
