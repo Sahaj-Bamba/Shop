@@ -79,7 +79,7 @@ if (!(ctype_alpha($name[0]))) {
 
   //  Duplicate user check via phone number and email
 
-  $sql = "SELECT * FROM 'owner' WHERE store_name LIKE '$shop_name' ;";
+  $sql = "SELECT * FROM owner WHERE store_name LIKE '$shop_name' ;";
   $Res = $con->query($sql);
 
   if ($Res->num_rows > 0) {

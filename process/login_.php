@@ -16,9 +16,11 @@ if(($result->num_rows > 0)){
 
 	session_start();
 	$_SESSION["gamer"] = $result->fetch_assoc();
-	$_SESSION["ID"] = $last_id;
+	// $_SESSION["ID"] = $last_id;
 	$_SESSION['shopName'] = $name;
-
+	// echo 'aaaaaaaaa';
+	// echo $_SESSION['gamer'];
+	// echo $_SESSION['gamer']['store_name'];
 }
 else{
 

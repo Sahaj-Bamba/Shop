@@ -2,16 +2,7 @@
 
 	include 'connection.php';
 	include 'Vars.php';
-
-    if(isset($_GET['shop'])){
-        $ownerShopName = mysqli_real_escape_string($con, $_GET["shop"]);
-        $_SESSION["ownerShopName"] = $ownerShopName;    
-    }else if(isset($_SESSION['ownerShopName'])){
-	
-	}else{
-		header('location:home.php');
-	}
-
+	include 'common/shopName.php';
 
 ?>
 
@@ -55,7 +46,7 @@
 
 			<div class="jumbotron">
 				<div class="container text-center">
-					<h1 class="display-2"> <?php echo strtoupper($_SESSION["ownerShopName"]); ?> </h1>      
+					<h1 class="display-2"> <?php echo strtoupper($_SESSION["shopName"]); ?> </h1>      
 					<strong><h4 class="mark"> You Want it ? We got it. </h4></strong>
 				</div>
 			</div>
@@ -89,9 +80,10 @@
 		<script type="text/javascript">
             $(document).ready(function(){
 
-                <?php 
+				<?php 
 
-                    $result = $con->query("SELECT * FROM open WHERE 1");
+					$tm = $_SESSION['shopName'];
+                    $result = $con->query("SELECT is_open FROM owner WHERE store_name like '$tm' ;");
                     $X = $result->fetch_assoc();
                     if ($X["is_open"] == 0) {
                 ?>
@@ -108,9 +100,13 @@
                 <?php } ?>
 
                 <?php 
-                if ((isset($_SESSION["gamer"]))&&(strcmp($_SESSION["gamer"]["type"], "owner")==0)) {  
-                ?>
+                if ((isset($_SESSION["gamer"]))) {  
+				?>
+				
                     $("#shop_status").removeClass("disabled");
+                    $("#shop_status").click(function(){
+						document.location.href = 'process/update_open.php';
+					});
                     
                 <?php 
                 } 

@@ -22,7 +22,7 @@
                 if ( isset($_SESSION['shopName']) )  {
             ?>
                 <li class="nav-item">
-                    <a class="nav-link" href="#">Home</a>
+                    <a class="nav-link" href="index.php">Home</a>
                 </li>
                 <li class="nav-item">
                     <a class="nav-link" href="category.php">Category</a>
