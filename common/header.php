@@ -73,9 +73,9 @@
 
                     <li class="dropdown"><a class="dropdown-toggle" data-toggle="dropdown" href="#"> <?php echo $_SESSION["gamer"]["name"]; ?> <span class="caret"></span></a>
                         <ul class="dropdown-menu">
-                            <li class="nav-item"><a class="nav-link" href="profile.php">Profile</a></li>
-                            <li class="nav-item"><a class="nav-link" href="change_pic.php">Change Pic</a></li>
-                            <li class="nav-item"><a class="nav-link" href="logout.php">Logout</a></li>
+                            <!-- <li class="nav-item"><a class="nav-link" href="profile.php">Profile</a></li>
+                            <li class="nav-item"><a class="nav-link" href="change_pic.php">Change Pic</a></li> -->
+                            <li class="nav-item"><a class="nav-link" style = "color:black;" href="logout.php">Logout</a></li>
                         </ul>
                     </li>
 
