@@ -30,9 +30,13 @@
                 <li class="nav-item">
                     <a class="nav-link" href="offer.php">Offers</a>
                 </li>
+                <?php
+                /*
                 <li class="nav-item">
                     <a class="nav-link" href="contact.php">Contact</a>
                 </li>
+                */
+                ?>
                 <?php 
                     if ((isset($_SESSION["gamer"]))) {  
                 ?>
