@@ -1,12 +1,13 @@
 <?php 
 
-include '../connection.php';
-include '../Vars.php';
-
 /*		Form validation					*/
 
 // define variables and set to empty values
 
+
+//ini_set('display_errors', 1);
+//ini_set('display_startup_errors', 1);
+//error_reporting(E_ALL);
 
 $name = $email = $gender = $address = $phone_number = $type = $password = "";
 $emailErr = $Repeat = $passErr = $phoneErr = " " ;
@@ -80,7 +81,8 @@ if (!(ctype_alpha($name[0]))) {
   //  Duplicate user check via phone number and email
 
   $sql = "SELECT * FROM owner WHERE store_name LIKE '$shop_name' ;";
-  $Res = $con->query($sql);
+	echo $sql;
+	$Res = $con->query($sql);
 
   if ($Res->num_rows > 0) {
 
@@ -93,27 +95,37 @@ if (!(ctype_alpha($name[0]))) {
 
   }
 
-echo $_SESSION;
+echo $_SESSION["Er"];
 
   //$password = md5($password);                             //   md5 encryption
 
   if ((strcmp($_SESSION["Er"], ""))==0) {
-    
+    echo "hi";
     $sql = "INSERT INTO owner (name ,store_name , contact_number, email , address , password ) VALUES ('$name','$shop_name','$phone_number','$email','$address','$password') ;";
+    echo $sql;
     $result = $con->query($sql);
+    echo "xxxxxxxxx";
+    
     $sql = "SELECT * FROM owner WHERE store_name LIKE '$shop_name' ;";
+    echo $sql;
     $result = $con->query($sql);
+    echo "zzzzzzzzzzzzzz";
     $_SESSION["gamer"] = $result->fetch_assoc();
+    echo "kkkkkkkkk";
     $_SESSION["id"] = $_SESSION["gamer"]['id'];
+    echo "llllllllll";
     $_SESSION["shopName"] = $shop_name;
-
+	
+    echo "diwwww";
     $nm = "../Image/".$_SESSION["id"];
     $result = mkdir ($nm, "0755");
+    echo "dasasddasasddasdsasad";
     $result = mkdir ($nm."/Category", "0755");
     $result = mkdir ($nm."/Offer", "0755");
     $result = mkdir ($nm."/Product", "0755");
     $result = mkdir ($nm."/User", "0755");
 
+    echo "helllll";
 
     header('location:../index.php');
   }

@@ -17,7 +17,7 @@
 		die("Connection failed: " . $con->connect_error);
 	} 
 
-	
+		
 	// Start Session and set session variables
 
 	session_start();
