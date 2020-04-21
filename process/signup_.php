@@ -101,12 +101,19 @@ echo $_SESSION;
     
     $sql = "INSERT INTO owner (name ,store_name , contact_number, email , address , password ) VALUES ('$name','$shop_name','$phone_number','$email','$address','$password') ;";
     $result = $con->query($sql);
-    $_SESSION["ID"] = $con->insert_id;
-
     $sql = "SELECT * FROM owner WHERE store_name LIKE '$shop_name' ;";
     $result = $con->query($sql);
     $_SESSION["gamer"] = $result->fetch_assoc();
+    $_SESSION["id"] = $_SESSION["gamer"]['id'];
     $_SESSION["shopName"] = $shop_name;
+
+    $nm = "../Image/".$_SESSION["id"];
+    $result = mkdir ($nm, "0755");
+    $result = mkdir ($nm."/Category", "0755");
+    $result = mkdir ($nm."/Offer", "0755");
+    $result = mkdir ($nm."/Product", "0755");
+    $result = mkdir ($nm."/User", "0755");
+
 
     header('location:../index.php');
   }

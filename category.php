@@ -39,16 +39,22 @@
 			</div>
 
 			<?php
-
-				$cats = $con->query("SELECT * FROM category WHERE 1 ;");
+				$x = $_SESSION['id'];
+				$sql = "SELECT * FROM category WHERE owner = '$x' ";
+				// echo $sql;
+				$cats = $con->query("SELECT * FROM category WHERE owner = '$x' ;");
 				while ($row = $cats->fetch_assoc()) {
 					$htm = "";
-					$htm .= '<div class="cat row alert alert-success">';
+					$htm .= '<div class="cat row alert alert-success" style="text-align: center; align-items: center;">';
+					$htm .= '<div style="margin:auto;">';
 					$htm .= '<div class=" bullet" style="background: url('."'".$row['pic_loc']."'".');  background-repeat: no-repeat; background-size: 100% 100%; background-position: center; "> </div>';
 					$htm .= '<div class=" name"> '.$row['name'].' </div>';
-					
+					$htm .= '</div>';
 					echo $htm;
-					$pros = $con->query("SELECT `id`, `name`, `rate`, `category`, `pic_loc`, `description` FROM `product` WHERE `category` ='".$row['name']."'");
+					$sql = "SELECT `id`, `name`, `rate`, `category`, `pic_loc`, `description` FROM `product` WHERE `category` ='".$row['name']."' and owner = '".$_SESSION['id']."';";
+					// echo $sql;
+					$pros = $con->query("SELECT `id`, `name`, `rate`, `category`, `pic_loc`, `description` FROM `product` WHERE `category` ='".$row['name']."' and owner = '".$_SESSION['id']."';");
+					
 					if ($pros->num_rows == 0) {
 						echo "</div>";
 						continue;

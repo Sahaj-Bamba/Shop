@@ -41,13 +41,13 @@
                     if ((isset($_SESSION["gamer"]))) {  
                 ?>
                     <li class="nav-item">
-                        <a class="nav-link" href="#">Add Category</a>
+                        <a class="nav-link" href="add_category.php">Add Category</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="#">Add Product</a>
+                        <a class="nav-link" href="add_product.php">Add Product</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="#">Add Offers</a>
+                        <a class="nav-link" href="add_offer.php">Add Offers</a>
                     </li>
             
                 <?php } ?>

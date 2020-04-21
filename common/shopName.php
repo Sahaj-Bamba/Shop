@@ -17,9 +17,12 @@ if(isset($_GET['shop'])){
         // remove all session variables
         // session_unset(); 
 
+        
+        $x = $result->fetch_assoc();
+        
         $_SESSION["shopName"] = $ownerShopName;
-
-        include 'Vars.php';
+        $_SESSION["id"] = $x['id'];
+        // include 'Vars.php';
 
     }
     

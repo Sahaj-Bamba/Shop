@@ -16,7 +16,7 @@ if(($result->num_rows > 0)){
 
 	session_start();
 	$_SESSION["gamer"] = $result->fetch_assoc();
-	// $_SESSION["ID"] = $last_id;
+	$_SESSION["id"] = $_SESSION["gamer"]['id'];
 	$_SESSION['shopName'] = $name;
 	// echo 'aaaaaaaaa';
 	// echo $_SESSION['gamer'];
